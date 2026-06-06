@@ -15,7 +15,13 @@ Here are some ideas to get you started:
 - ⚡ Fun fact: ...
 -->
 ## About me
-芝浦工業大学システム理工学部電子情報システム学科の竹内裕生です! 学内団体や個人開発での成果物を主にアップロードしています。学内団体ではインタラクティブアートの制作に携わってきました。また個人開発ではGo言語を用いたAPIサーバー開発を行っています。Unityでのインタラクティブなゲーム開発も行っています。
+芝浦工業大学システム理工学部電子情報システム学科の竹内裕生です。
+学内団体や個人開発で制作した成果物を公開しています。
+
+学内団体ではUnityとKinectを活用したインタラクティブアート制作に取り組み、
+個人開発ではGoを用いたAPIサーバー開発やReactによるフロントエンド開発を行っています。
+また、Unityを利用したゲーム開発や3Dアバターシステムの実装にも挑戦しています。
+
 ## Tech Stack
 ![Unity](https://img.shields.io/badge/-Unity-000000?style=flat&logo=unity&logoColor=white)
 ![C](https://img.shields.io/badge/-C-A8B9CC?style=flat&logo=c&logoColor=black)
@@ -25,10 +31,18 @@ Here are some ideas to get you started:
 ![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
 ![Go](https://img.shields.io/badge/-Go-00ADD8?style=flat&logo=go&logoColor=white)
 ![Python](https://img.shields.io/badge/-Python-3776AB?style=flat&logo=python&logoColor=white)
-## Github Stats
-<img src="https://github-readme-stats.vercel.app/api?username=take08042004&amp;show_icons=true&amp;theme=radical" />
 
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=take08042004&amp;layout=compact&amp;theme=radical" />
+## Featured Projects
+
+### 2026Omiya-Portfolio
+Unity + Kinectを用いたアバター作成・対戦アプリ
+
+### go-stations
+Go + SQLiteによるREST APIサーバー
+
+### react-stations
+Reactを利用した犬種検索アプリ
+
 ## Contact
 -Email:take61760@gmail.com
 
