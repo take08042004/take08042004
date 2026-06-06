@@ -26,9 +26,9 @@ Here are some ideas to get you started:
 ![Go](https://img.shields.io/badge/-Go-00ADD8?style=flat&logo=go&logoColor=white)
 ![Python](https://img.shields.io/badge/-Python-3776AB?style=flat&logo=python&logoColor=white)
 ## Github Stats
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=take08042004&show_icons=true&theme=radical)
+<img src="https://github-readme-stats.vercel.app/api?username=take08042004&amp;show_icons=true&amp;theme=radical" />
 
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=take08042004&layout=compact&theme=radical)
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=take08042004&amp;layout=compact&amp;theme=radical" />
 ## Contact
 -Email:take61760@gmail.com
 
