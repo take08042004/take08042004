@@ -27,6 +27,8 @@ Here are some ideas to get you started:
 ![Python](https://img.shields.io/badge/-Python-3776AB?style=flat&logo=python&logoColor=white)
 ## Github Stats
 ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=take08042004&show_icons=true&theme=radical)
+
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=take08042004&layout=compact&theme=radical)
 ## Contact
 -Email:take61760@gmail.com
 
