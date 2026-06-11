@@ -44,18 +44,6 @@ h2{
     padding-bottom:10px;
 }
 
-.skills{
-    display:flex;
-    flex-wrap:wrap;
-    gap:10px;
-}
-
-.skill{
-    background:#24292e;
-    color:white;
-    padding:8px 15px;
-    border-radius:20px;
-}
 
 .projects{
     display:grid;
@@ -132,72 +120,89 @@ body.dark h2 {
     }
 }
 
-.skill-container {
-    max-width: 800px;
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
 }
 
-.skill-item {
-    margin-bottom: 20px;
-}
-
-.skill-header {
+.skill-card {
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 5px;
-    font-weight: bold;
+    align-items: center;
+    gap: 20px;
+    background: #ffffff;
+    padding: 22px;
+    border-radius: 16px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+}
+
+.skill-card img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+}
+
+.skill-info {
+    flex: 1;
+}
+
+.skill-info h3 {
+    margin: 0 0 10px;
+    font-size: 1.3rem;
 }
 
 .skill-bar {
     width: 100%;
-    height: 18px;
-    background: #ddd;
+    height: 12px;
+    background: #e1e4e8;
     border-radius: 20px;
     overflow: hidden;
 }
 
 .skill-fill {
     height: 100%;
-    width: 0;
-    background: linear-gradient(
-        90deg,
-        #61dafb,
-        #0366d6
-    );
     border-radius: 20px;
-    animation: growBar 1.5s ease forwards;
+    animation: growSkill 1.5s ease;
 }
 
-.skill-fill.unity {
-    --skill-width: 80%;
+.skill-fill.blue {
+    background: #3776ff;
 }
 
-.skill-fill.csharp {
-    --skill-width: 75%;
+.skill-fill.green {
+    background: #22c55e;
 }
 
-.skill-fill.go {
-    --skill-width: 70%;
+.skill-fill.yellow {
+    background: #f4b400;
 }
 
-.skill-fill.react {
-    --skill-width: 60%;
+.skill-fill.orange {
+    background: #ff7a00;
 }
 
-.skill-fill.java {
-    --skill-width: 70%;
+.skill-fill.red {
+    background: #ef4444;
 }
 
-.skill-fill.python {
-    --skill-width: 65%;
-}
-
-@keyframes growBar {
+@keyframes growSkill {
     from {
         width: 0;
     }
-    to {
-        width: var(--skill-width);
-    }
+}
+
+body.dark .skill-card {
+    background: #1e1e1e;
+}
+
+body.dark .skill-bar {
+    background: #444;
 }
 
 </style>
@@ -235,65 +240,115 @@ body.dark h2 {
 <section>
     <h2>Skills</h2>
 
-    <div class="skill-container">
+    <div class="skills-grid">
 
-        <div class="skill-item">
-            <div class="skill-header">
-                <span>Unity</span>
-                <span>80%</span>
-            </div>
-            <div class="skill-bar">
-                <div class="skill-fill unity"></div>
+        <div class="skill-card">
+            <img src="images/unity.png" alt="Unity">
+            <div class="skill-info">
+                <h3>Unity</h3>
+                <div class="skill-bar">
+                    <div class="skill-fill blue" style="width:80%"></div>
+                </div>
             </div>
         </div>
 
-        <div class="skill-item">
-            <div class="skill-header">
-                <span>C#</span>
-                <span>75%</span>
-            </div>
-            <div class="skill-bar">
-                <div class="skill-fill csharp"></div>
-            </div>
-        </div>
-
-        <div class="skill-item">
-            <div class="skill-header">
-                <span>Go</span>
-                <span>70%</span>
-            </div>
-            <div class="skill-bar">
-                <div class="skill-fill go"></div>
+        <div class="skill-card">
+            <img src="images/csharp.png" alt="C#">
+            <div class="skill-info">
+                <h3>C#</h3>
+                <div class="skill-bar">
+                    <div class="skill-fill green" style="width:75%"></div>
+                </div>
             </div>
         </div>
 
-        <div class="skill-item">
-            <div class="skill-header">
-                <span>React</span>
-                <span>60%</span>
-            </div>
-            <div class="skill-bar">
-                <div class="skill-fill react"></div>
-            </div>
-        </div>
-
-        <div class="skill-item">
-            <div class="skill-header">
-                <span>Java</span>
-                <span>70%</span>
-            </div>
-            <div class="skill-bar">
-                <div class="skill-fill java"></div>
+        <div class="skill-card">
+            <img src="images/go.png" alt="Go">
+            <div class="skill-info">
+                <h3>Go</h3>
+                <div class="skill-bar">
+                    <div class="skill-fill blue" style="width:70%"></div>
+                </div>
             </div>
         </div>
 
-        <div class="skill-item">
-            <div class="skill-header">
-                <span>Python</span>
-                <span>65%</span>
+        <div class="skill-card">
+            <img src="images/react.png" alt="React">
+            <div class="skill-info">
+                <h3>React</h3>
+                <div class="skill-bar">
+                    <div class="skill-fill orange" style="width:60%"></div>
+                </div>
             </div>
-            <div class="skill-bar">
-                <div class="skill-fill python"></div>
+        </div>
+
+        <div class="skill-card">
+            <img src="images/javascript.png" alt="JavaScript">
+            <div class="skill-info">
+                <h3>JavaScript</h3>
+                <div class="skill-bar">
+                    <div class="skill-fill yellow" style="width:65%"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="skill-card">
+            <img src="images/java.png" alt="Java">
+            <div class="skill-info">
+                <h3>Java</h3>
+                <div class="skill-bar">
+                    <div class="skill-fill yellow" style="width:70%"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="skill-card">
+            <img src="images/python.png" alt="Python">
+            <div class="skill-info">
+                <h3>Python</h3>
+                <div class="skill-bar">
+                    <div class="skill-fill orange" style="width:65%"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="skill-card">
+            <img src="images/git.png" alt="Git">
+            <div class="skill-info">
+                <h3>Git</h3>
+                <div class="skill-bar">
+                    <div class="skill-fill red" style="width:75%"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="skill-card">
+            <img src="images/github.png" alt="GitHub">
+            <div class="skill-info">
+                <h3>GitHub</h3>
+                <div class="skill-bar">
+                    <div class="skill-fill red" style="width:75%"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="skill-card">
+            <img src="images/sqlite.png" alt="SQLite">
+            <div class="skill-info">
+                <h3>SQLite</h3>
+                <div class="skill-bar">
+                    <div class="skill-fill orange" style="width:60%"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="skill-card">
+            <img src="images/kinect.png" alt="Kinect">
+            <div class="skill-info">
+                <h3>Kinect</h3>
+                <div class="skill-bar">
+                    <div class="skill-fill green" style="width:65%"></div>
+                </div>
             </div>
         </div>
 
