@@ -14,10 +14,23 @@ body{
 }
 
 header{
-    background:#24292e;
+    position:relative;
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,0.7),
+            rgba(0,0,0,0.7)
+        ),
+        url("images/hero-background.png");
+
+    background-size:cover;
+    background-position:center;
+
     color:white;
+
     text-align:center;
-    padding:80px 20px;
+
+    padding:150px 20px;
 }
 
 header h1{
@@ -205,6 +218,39 @@ body.dark .skill-bar {
     background: #444;
 }
 
+#typing-text{
+
+    font-size:2rem;
+
+    font-weight:bold;
+
+    min-height:50px;
+
+    color:#61dafb;
+
+    margin-top:20px;
+}
+
+.scroll-indicator{
+
+    margin-top:60px;
+
+    animation:bounce 1.5s infinite;
+
+    font-size:1.2rem;
+}
+
+@keyframes bounce{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(10px);
+    }
+}
+
 </style>
 </head>
 
@@ -213,8 +259,11 @@ body.dark .skill-bar {
 <header>
     <h1>Yuki Takeuchi</h1>
     <p>芝浦工業大学 電子情報システム学科</p>
-    <p>Unity / Go / React Developer</p>
+    <p id="typing-text"></p>
     <button id="darkModeButton">🌙 Dark Mode</button>
+    <div class="scroll-indicator">
+    ↓ Scroll
+    </div>
 </header>
 
 <div class="container">
@@ -483,6 +532,72 @@ document.addEventListener("mousemove", function (e) {
 });
 </script>
 
+<script>
+
+const roles = [
+    "Unity Developer",
+    "Game Developer",
+    "Interactive Artist",
+    "Go Backend Developer",
+    "React Developer"
+];
+
+let roleIndex = 0;
+let charIndex = 0;
+
+const typingText =
+document.getElementById("typing-text");
+
+function typeEffect(){
+
+    if(charIndex < roles[roleIndex].length){
+
+        typingText.textContent +=
+        roles[roleIndex].charAt(charIndex);
+
+        charIndex++;
+
+        setTimeout(typeEffect,100);
+
+    }else{
+
+        setTimeout(deleteEffect,1500);
+
+    }
+}
+
+function deleteEffect(){
+
+    if(charIndex > 0){
+
+        typingText.textContent =
+        roles[roleIndex].substring(
+            0,
+            charIndex - 1
+        );
+
+        charIndex--;
+
+        setTimeout(deleteEffect,50);
+
+    }else{
+
+        roleIndex++;
+
+        if(roleIndex >= roles.length){
+
+            roleIndex = 0;
+
+        }
+
+        setTimeout(typeEffect,500);
+
+    }
+}
+
+typeEffect();
+
+</script>
 
 
 </body>
