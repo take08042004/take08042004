@@ -14,6 +14,7 @@
 * Kinectを活用したインタラクティブシステム開発
 * Git / GitHubを用いたチーム開発
 * Three.jsを用いた3Dインタラクティブアートの開発
+* FigmaによるUI/UXデザイン・ゲームUI設計
 
 ---
 
@@ -27,6 +28,7 @@
 ![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?style=flat\&logo=javascript\&logoColor=black)
 ![Python](https://img.shields.io/badge/-Python-3776AB?style=flat\&logo=python\&logoColor=white)
 ![Git](https://img.shields.io/badge/-Git-F05032?style=flat\&logo=git\&logoColor=white)
+![Figma](https://img.shields.io/badge/-Figma-F24E1E?style=flat\&logo=figma\&logoColor=white)
 
 ---
 
