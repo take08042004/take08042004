@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UI / Game Design | Yuki Takeuchi Portfolio</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#f5f5f5;
+    color:#333;
+}
+
+header{
+    position:relative;
+    background:
+        linear-gradient(
+            rgba(0,0,0,0.7),
+            rgba(0,0,0,0.7)
+        ),
+        url("images/hero-background.png");
+    background-size:cover;
+    background-position:center;
+    color:white;
+    text-align:center;
+    padding:100px 20px 70px;
+}
+
+header h1{
+    margin:0;
+    font-size:2.6rem;
+}
+
+header p{
+    font-size:1.1rem;
+    opacity:0.9;
+}
+
+.back-link{
+    display:inline-block;
+    margin-bottom:24px;
+    color:#61dafb;
+    text-decoration:none;
+    font-size:0.95rem;
+}
+
+.back-link:hover{
+    text-decoration:underline;
+}
+
+#darkModeButton {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+section{
+    margin:70px 0;
+}
+
+h2{
+    border-bottom:3px solid #24292e;
+    padding-bottom:10px;
+}
+
+.project-meta{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    margin:14px 0 18px;
+}
+
+.tag{
+    background:#e1e4e8;
+    color:#333;
+    font-size:0.8rem;
+    padding:5px 12px;
+    border-radius:20px;
+}
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:18px;
+    margin:24px 0;
+}
+
+.gallery figure{
+    margin:0;
+    background:white;
+    border-radius:10px;
+    padding:10px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+
+.gallery img{
+    width:100%;
+    border-radius:6px;
+    display:block;
+}
+
+.gallery figcaption{
+    text-align:center;
+    font-size:0.85rem;
+    color:#666;
+    padding-top:8px;
+}
+
+.links{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+    margin-top:20px;
+}
+
+.btn{
+    display:inline-block;
+    text-decoration:none;
+    padding:12px 22px;
+    border-radius:24px;
+    font-size:0.95rem;
+    font-weight:bold;
+    transition:0.2s;
+}
+
+.btn.primary{
+    background:#24292e;
+    color:white;
+}
+
+.btn.primary:hover{
+    background:#000;
+}
+
+.btn.secondary{
+    background:white;
+    color:#24292e;
+    border:1px solid #24292e;
+}
+
+.btn.secondary:hover{
+    background:#eee;
+}
+
+footer{
+    background:#24292e;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+body.dark{
+    background:#121212;
+    color:#f5f5f5;
+}
+
+body.dark .gallery figure{
+    background:#1e1e1e;
+}
+
+body.dark .gallery figcaption{
+    color:#aaa;
+}
+
+body.dark .tag{
+    background:#333;
+    color:#f5f5f5;
+}
+
+body.dark h2{
+    border-bottom-color:#f5f5f5;
+}
+
+body.dark .btn.secondary{
+    background:#1e1e1e;
+    color:#f5f5f5;
+    border-color:#666;
+}
+
+.cursor-trail {
+    position: fixed;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #61dafb;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    animation: trailFade 0.8s ease-out forwards;
+}
+
+@keyframes trailFade {
+    0% { opacity: 1; transform: translate(-50%, -50%) scale(0.5); }
+    100% { opacity: 0; transform: translate(-50%, -50%) scale(2.5); }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>UI / Game Design</h1>
+    <p>Figmaでの画面設計から、実際に操作できるプロトタイプまで</p>
+    <button id="darkModeButton">🌙 Dark Mode</button>
+</header>
+
+<div class="container">
+
+<a class="back-link" href="index.html">← ホームへ戻る</a>
+
+<section>
+    <h2>01 — Waypoint</h2>
+    <p>チーム向けプロジェクト管理ツールの認証フロー。ログイン・新規登録・パスワード再設定を、ひとつのビジュアル言語で統一設計。</p>
+    <div class="project-meta">
+        <span class="tag">認証UI</span>
+        <span class="tag">フォーム設計</span>
+        <span class="tag">レスポンシブ</span>
+    </div>
+    <div class="gallery">
+        <figure><img src="images/ui-design/waypoint-login.png" alt="Waypoint ログイン画面"><figcaption>ログイン</figcaption></figure>
+        <figure><img src="images/ui-design/waypoint-signup.png" alt="Waypoint 新規登録画面"><figcaption>新規登録</figcaption></figure>
+        <figure><img src="images/ui-design/waypoint-forgot.png" alt="Waypoint パスワード再設定画面"><figcaption>パスワード再設定</figcaption></figure>
+    </div>
+    <div class="links">
+        <a class="btn primary" href="https://claude.ai/artifact/SZj2kP3UWb7gfQL2ZpAb8G" target="_blank" rel="noopener">▶ プロトタイプを操作する</a>
+    </div>
+</section>
+
+<section>
+    <h2>02 — Emberfall Reach</h2>
+    <p>PC向けファンタジーRPGの戦闘中HUD。体力・マナ、ミニマップ、クエストトラッカー、アビリティホットバーをひとつの画面に統合し、視線の流れを設計。</p>
+    <div class="project-meta">
+        <span class="tag">ゲームHUD</span>
+        <span class="tag">ファンタジー</span>
+        <span class="tag">情報設計</span>
+    </div>
+    <div class="gallery">
+        <figure><img src="images/ui-design/emberfall-hud.png" alt="Emberfall Reach 戦闘HUD画面"><figcaption>戦闘HUD</figcaption></figure>
+    </div>
+    <div class="links">
+        <a class="btn primary" href="https://claude.ai/artifact/H9NhqmZXouVQZE3MsQHeEQ" target="_blank" rel="noopener">▶ プロトタイプを操作する</a>
+    </div>
+</section>
+
+<section>
+    <h2>03 — Astralis</h2>
+    <p>スマホ向けガチャRPGの主要画面一式。召喚演出、ショップ、ターン制バトル、インベントリまで、ゲームループ全体を貫く一貫したビジュアル言語で設計。</p>
+    <div class="project-meta">
+        <span class="tag">ガチャ演出</span>
+        <span class="tag">課金UI</span>
+        <span class="tag">バトルUI</span>
+    </div>
+    <div class="gallery">
+        <figure><img src="images/ui-design/astralis-summon-gate.png" alt="Astralis 召喚ゲート画面"><figcaption>召喚ゲート</figcaption></figure>
+        <figure><img src="images/ui-design/astralis-summon-result.png" alt="Astralis 召喚結果画面"><figcaption>召喚結果</figcaption></figure>
+        <figure><img src="images/ui-design/astralis-shop.png" alt="Astralis ショップ画面"><figcaption>ショップ</figcaption></figure>
+        <figure><img src="images/ui-design/astralis-battle.png" alt="Astralis バトル画面"><figcaption>バトル</figcaption></figure>
+        <figure><img src="images/ui-design/astralis-inventory.png" alt="Astralis インベントリ画面"><figcaption>インベントリ</figcaption></figure>
+    </div>
+    <div class="links">
+        <a class="btn primary" href="https://claude.ai/artifact/8U1XEPtkF2DW94qmCEGFkb" target="_blank" rel="noopener">▶ 召喚を試す</a>
+        <a class="btn secondary" href="https://claude.ai/artifact/H5MqsYBCXEGTna6fndLraX" target="_blank" rel="noopener">ショップを試す</a>
+        <a class="btn secondary" href="https://claude.ai/artifact/135ofqpJWP7PMKvFhubr4k" target="_blank" rel="noopener">バトルを試す</a>
+        <a class="btn secondary" href="https://claude.ai/artifact/6sEGN2BVDX8g6E6LzdRDBX" target="_blank" rel="noopener">インベントリを試す</a>
+    </div>
+</section>
+
+<section>
+    <h2>04 — Honey Bear Kitchen</h2>
+    <p>クマのシェフが主人公のカジュアルクッキングゲーム。ホーム・ショップ・マップ・バトル・ステータス・設定の全画面を、素材やコインが実際に連動するひとつの遊べるゲームとして統合。</p>
+    <div class="project-meta">
+        <span class="tag">カジュアルゲーム</span>
+        <span class="tag">キャラクターUI</span>
+        <span class="tag">ゲームループ設計</span>
+    </div>
+    <div class="gallery">
+        <figure><img src="images/ui-design/honeybear-home.png" alt="Honey Bear Kitchen ホーム画面"><figcaption>ホーム</figcaption></figure>
+        <figure><img src="images/ui-design/honeybear-shop.png" alt="Honey Bear Kitchen ショップ画面"><figcaption>ショップ</figcaption></figure>
+        <figure><img src="images/ui-design/honeybear-map.png" alt="Honey Bear Kitchen マップ選択画面"><figcaption>マップ選択</figcaption></figure>
+        <figure><img src="images/ui-design/honeybear-battle.png" alt="Honey Bear Kitchen クッキングバトル画面"><figcaption>クッキングバトル</figcaption></figure>
+        <figure><img src="images/ui-design/honeybear-status.png" alt="Honey Bear Kitchen ステータス画面"><figcaption>ステータス</figcaption></figure>
+        <figure><img src="images/ui-design/honeybear-settings.png" alt="Honey Bear Kitchen 設定画面"><figcaption>設定</figcaption></figure>
+    </div>
+    <div class="links">
+        <a class="btn primary" href="https://claude.ai/artifact/FV1GBfPymhLMXukSUjL2GA" target="_blank" rel="noopener">▶ 通しでプレイする</a>
+    </div>
+</section>
+
+</div>
+
+<footer>
+    © 2026 Yuki Takeuchi
+</footer>
+
+<script>
+const button = document.getElementById("darkModeButton");
+button.addEventListener("click", function () {
+    document.body.classList.toggle("dark");
+    if (document.body.classList.contains("dark")) {
+        button.textContent = "☀️ Light Mode";
+    } else {
+        button.textContent = "🌙 Dark Mode";
+    }
+});
+</script>
+
+<script>
+document.addEventListener("mousemove", function (e) {
+    const circle = document.createElement("div");
+    circle.className = "cursor-trail";
+    circle.style.left = e.clientX + "px";
+    circle.style.top = e.clientY + "px";
+    document.body.appendChild(circle);
+    setTimeout(function () {
+        circle.remove();
+    }, 800);
+});
+</script>
+
+</body>
+</html>
