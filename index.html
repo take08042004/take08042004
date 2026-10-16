@@ -4,6 +4,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Yuki Takeuchi Portfolio</title>
+<meta name="description" content="芝浦工業大学 電子情報システム学科 Yuki Takeuchi のポートフォリオ。Unity / Go / React の開発とFigmaによるUI・ゲームデザイン。">
+<meta name="theme-color" content="#24292e">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Yuki Takeuchi Portfolio">
+<meta property="og:description" content="Unity / Go / React の開発と、Figmaによる UI・ゲームデザインの作品集。">
+<meta property="og:image" content="https://take08042004.github.io/take08042004/images/hero-background.png">
+<meta property="og:url" content="https://take08042004.github.io/take08042004/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🎮%3C/text%3E%3C/svg%3E">
 
 <style>
 body{
@@ -251,10 +260,73 @@ body.dark .skill-bar {
     }
 }
 
+
+html{scroll-behavior:smooth;scroll-padding-top:60px}
+a:focus-visible,button:focus-visible{outline:3px solid #61dafb;outline-offset:2px}
+
+nav.site-nav{
+    position:sticky;top:0;z-index:1000;
+    background:rgba(36,41,46,0.95);
+    display:flex;justify-content:center;flex-wrap:wrap;gap:6px 24px;
+    padding:12px 20px;
+}
+nav.site-nav a{color:#fff;text-decoration:none;font-size:0.95rem}
+nav.site-nav a:hover{color:#61dafb}
+
+.design-previews{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:16px;
+}
+.design-previews figure{margin:0;background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,0.1)}
+.design-previews img{width:100%;height:160px;object-fit:cover;display:block}
+.design-previews figcaption{padding:8px 12px;font-size:0.9rem}
+body.dark .design-previews figure{background:#1e1e1e}
+.more-link{display:inline-block;margin-top:16px;color:#0366d6;text-decoration:none;font-weight:bold}
+body.dark a{color:#8ab4f8}
+body.dark nav.site-nav a{color:#fff}
+
+.timeline{list-style:none;padding:0;margin:0}
+.timeline li{background:#fff;border-left:4px solid #24292e;border-radius:8px;padding:14px 18px;margin-bottom:14px;box-shadow:0 2px 8px rgba(0,0,0,0.08)}
+.timeline li strong{display:block;margin-bottom:4px}
+body.dark .timeline li{background:#1e1e1e;border-left-color:#61dafb}
+
+.contact-links{display:flex;flex-wrap:wrap;gap:12px}
+.contact-links a{display:inline-block;padding:10px 20px;border-radius:20px;background:#24292e;color:#fff;text-decoration:none}
+.contact-links a:hover{background:#0366d6}
+body.dark .contact-links a{color:#fff}
+
+#toTop{
+    position:fixed;right:20px;bottom:20px;width:44px;height:44px;
+    border:none;border-radius:50%;background:#24292e;color:#fff;font-size:1.2rem;
+    cursor:pointer;opacity:0;pointer-events:none;transition:opacity .3s;z-index:1000;
+}
+#toTop.show{opacity:1;pointer-events:auto}
+
+@media (max-width:600px){
+    header{padding:90px 16px}
+    header h1{font-size:2.2rem}
+    #typing-text{font-size:1.4rem}
+}
+@media (hover:none){.cursor-trail{display:none}}
+@media (prefers-reduced-motion:reduce){
+    *{animation:none!important;transition:none!important}
+    html{scroll-behavior:auto}
+    .cursor-trail{display:none}
+}
 </style>
 </head>
 
 <body>
+
+<nav class="site-nav" aria-label="メインナビゲーション">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#design">UI / Game Design</a>
+    <a href="#activities">Activities</a>
+    <a href="#contact">Contact</a>
+</nav>
 
 <header>
     <h1>Yuki Takeuchi</h1>
@@ -268,7 +340,7 @@ body.dark .skill-bar {
 
 <div class="container">
 
-<section>
+<section id="about">
     <h2>About Me</h2>
 
     <p>
@@ -286,7 +358,7 @@ body.dark .skill-bar {
     </p>
 </section>
 
-<section>
+<section id="skills">
     <h2>Skills</h2>
 
     <div class="skills-grid">
@@ -414,7 +486,7 @@ body.dark .skill-bar {
     </div>
 </section>
 
-<section>
+<section id="projects">
     <h2>Featured Projects</h2>
 
     <div class="projects">
@@ -495,6 +567,26 @@ body.dark .skill-bar {
     </div>
 </section>
 
+<section id="design">
+    <h2>UI / Game Design</h2>
+    <div class="design-previews">
+        <figure><img src="images/ui-design/waypoint-login.png" alt="Waypoint ログイン画面" loading="lazy"><figcaption>Waypoint — 認証フロー</figcaption></figure>
+        <figure><img src="images/ui-design/emberfall-hud.png" alt="Emberfall Reach 戦闘HUD" loading="lazy"><figcaption>Emberfall Reach — 戦闘HUD</figcaption></figure>
+        <figure><img src="images/ui-design/astralis-summon-gate.png" alt="Astralis 召喚画面" loading="lazy"><figcaption>Astralis — ガチャRPG UI</figcaption></figure>
+        <figure><img src="images/ui-design/honeybear-home.png" alt="Honey Bear Kitchen ホーム画面" loading="lazy"><figcaption>Honey Bear Kitchen — クッキングゲーム</figcaption></figure>
+    </div>
+    <a class="more-link" href="ui-design.html">すべての作品とプロトタイプを見る →</a>
+</section>
+
+<section id="activities">
+    <h2>Activities</h2>
+    <ul class="timeline">
+        <li><strong>ShibaLab</strong>インタラクティブアート制作・チーム開発</li>
+        <li><strong>個人開発</strong>Go APIサーバー、Unity / Kinect アプリ、Figma UIプロトタイプ</li>
+        <li><strong>学習</strong>Clean Architecture、REST API設計、Python データ分析・機械学習</li>
+    </ul>
+</section>
+
 <section>
     <h2>Currently Learning</h2>
 
@@ -507,23 +599,17 @@ body.dark .skill-bar {
     </ul>
 </section>
 
-<section>
+<section id="contact">
     <h2>Contact</h2>
-
-    <p>
-        GitHub:
-        <a href="https://github.com/take08042004">
-            github.com/take08042004
-        </a>
-    </p>
-
-    <p>
-        Email:
-        take61760@gmail.com
-    </p>
+    <div class="contact-links">
+        <a href="https://github.com/take08042004" target="_blank" rel="noopener">GitHub</a>
+        <a href="mailto:take61760@gmail.com">Email</a>
+    </div>
 </section>
 
 </div>
+
+<button id="toTop" aria-label="ページ上部へ戻る">↑</button>
 
 <footer>
     © 2026 Yuki Takeuchi
@@ -542,6 +628,12 @@ button.addEventListener("click", function () {
         button.textContent = "🌙 Dark Mode";
     }
 });
+</script>
+
+<script>
+const toTop=document.getElementById("toTop");
+window.addEventListener("scroll",()=>toTop.classList.toggle("show",window.scrollY>400));
+toTop.addEventListener("click",()=>window.scrollTo({top:0,behavior:"smooth"}));
 </script>
 
 <script>
